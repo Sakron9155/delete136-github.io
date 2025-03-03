@@ -1,0 +1,198 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0B1F36;
+    color: #ffffff;
+}
+
+header {
+    background-color: #b91d1d;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    margin-right: 100px;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    background-color: #FF1E00;
+}
+
+.hero {
+    background-image: url('images/drivers-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #FF0000 ;
+    text-align: center;
+    padding: 80px 0;
+    margin-bottom: 50px;
+    text-shadow: 2px 2px 4px #ffffff;
+    font-family: 'Montserrat', sans-serif;
+}
+.about h2{
+    color: #FF0000;
+    padding-left: 30px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+.hero h2{
+    font-size: 3rem;
+}
+
+.drivers-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 20px;
+}
+
+.driver-item {
+    background-color: rgba(30, 63, 90, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgb(255, 0, 0);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.driver-item:hover {
+    transform: translateY(-5px);
+}
+
+.image-frame {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgb(0, 0, 255);
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-frame:hover {
+    transform: scale(1.05);
+}
+
+.image-frame img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.frame-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(0, 0, 255, 0.2), rgba(255, 0, 0, 0.2));
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.image-frame:hover .frame-overlay {
+    opacity: 1;
+}
+
+.driver-item h3 {
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.driver-item p {
+    margin: 5px 0;
+}
+
+.driver-details-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #b91d1d;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.driver-details-btn:hover {
+    background-color: #8c1616;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.image-frame {
+    position: relative; /* เพื่อให้ overlay ทำงานได้ */
+}
+
+.images-container {
+    display: flex; /* ใช้ flexbox เพื่อจัดเรียงรูปภาพข้างกัน */
+    justify-content: space-between; /* จัดเรียงให้ห่างกัน */
+}
+
+.images-container img {
+    max-width: 48%; /* กำหนดความกว้างสูงสุดของรูปภาพ */
+    height: auto; /* ให้รักษาสัดส่วนของรูป */
+}
+
+.frame-overlay {
+    position: absolute; /* กำหนด overlay ให้ทับบนรูปภาพ */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* สี overlay */
+    opacity: 0; /* ซ่อน overlay */
+    transition: opacity 0.3s; /* เพิ่มการเปลี่ยนแปลง */
+}
+
+.image-frame:hover .frame-overlay {
+    opacity: 1; /* แสดง overlay เมื่อเมาส์อยู่เหนือ */
+}
+@media (max-width: 1024px) {
+    .drivers-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .drivers-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Bull Racing - Formula 1 Team History</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@700&family=Bebas+Neue&family=Oswald:wght@700&family=Anton&display=swap" rel="stylesheet">
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/f1.png" alt="F1 Logo" class="logo-animation f1-logo">
+            <img src="images/logo.png" alt="Red Bull Logo" class="logo-animation redbull-logo">
+        </div>
+    </header>
+
+    <main>
+        <div class="center-content">
+            <h1 class="title-animation"> REDBULL RACING FAN SITE </h1>
+            <p class="subtitle-animation">FORMULA 1 TEAM HISTORY</p>
+            <button onclick="goToMainPage()" class="button-animation">Enter to site</button>
+        </div>
+    </main>
+
+    <div class="background-animation"></div>
+    <div class="particles"></div>
+
+    <script>
+        function goToMainPage() {
+            window.location.href = "home.html";
+        }
+    </script>
+</body>
+</html>
