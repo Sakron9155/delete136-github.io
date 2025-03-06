@@ -1,0 +1,322 @@
+body {
+    font-family: 'Prompt', sans-serif;
+    background: linear-gradient(135deg, #6B8DD6 0%, #8E37D7 100%);
+    margin: 0;
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    padding: 30px;
+}
+
+.confirmation-page {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.98);
+    border-radius: 25px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(20px);
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+
+.confirmation-page:hover {
+    transform: translateY(-5px);
+}
+
+.success-message {
+    text-align: center;
+    margin-bottom: 40px;
+    animation: fadeInDown 1.2s ease;
+}
+
+.success-icon {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(145deg, #00C853, #69F0AE);
+    border-radius: 50%;
+    color: white;
+    font-size: 60px;
+    line-height: 120px;
+    margin: 0 auto 25px;
+    box-shadow: 0 8px 25px rgba(0, 200, 83, 0.4);
+    animation: bounceIn 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    position: relative;
+    overflow: hidden;
+}
+
+.success-icon::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(45deg);
+    animation: shine 3s infinite;
+}
+
+.booking-details {
+    background: white;
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.booking-header {
+    border-bottom: 3px solid #f0f2f5;
+    padding-bottom: 25px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.booking-header::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, #6B8DD6, #8E37D7);
+}
+
+.booking-number {
+    color: #fff;
+    font-size: 1.2em;
+    background: linear-gradient(145deg, #6B8DD6, #8E37D7);
+    padding: 15px 30px;
+    border-radius: 50px;
+    display: inline-block;
+    box-shadow: 0 5px 15px rgba(107, 141, 214, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.booking-number::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(45deg);
+    animation: shine 2s infinite;
+}
+
+.flight-info {
+    margin: 35px 0;
+    padding: 30px;
+    background: #f8f9fa;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+.flight-info::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #6B8DD6, #8E37D7);
+}
+
+.airline-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 25px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+
+.airline-info:hover {
+    transform: translateY(-3px);
+}
+
+.airline-logo {
+    width: 70px;
+    height: 70px;
+    margin-right: 25px;
+    object-fit: contain;
+    filter: drop-shadow(0 5px 10px rgba(0,0,0,0.1));
+}
+
+.route-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 0;
+    position: relative;
+    padding: 30px;
+    background: rgba(255,255,255,0.8);
+    border-radius: 20px;
+}
+
+.flight-path {
+    flex: 1;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.plane-icon {
+    font-size: 40px;
+    color: #8E37D7;
+    display: inline-block;
+    transform: rotate(90deg);
+    text-shadow: 0 5px 15px rgba(142, 55, 215, 0.3);
+}
+
+.passenger-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    margin: 25px 0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #6B8DD6;
+    transform: translateX(0);
+    transition: transform 0.3s ease;
+}
+
+.passenger-card:hover {
+    transform: translateX(5px);
+}
+
+.payment-info {
+    margin: 35px 0;
+    padding: 35px;
+    background: linear-gradient(145deg, #f8f9fa, #ffffff);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    position: relative;
+    overflow: hidden;
+}
+
+.payment-info::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(135deg, transparent 50%, rgba(107, 141, 214, 0.1) 50%);
+}
+
+.total-amount {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #8E37D7;
+    text-align: right;
+    padding: 20px 30px;
+    background: rgba(142, 55, 215, 0.1);
+    border-radius: 15px;
+    margin-top: 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin-top: 60px;
+}
+
+.download-button,
+.home-button {
+    padding: 20px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: 600;
+    font-size: 1.1em;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+}
+
+.download-button {
+    background: linear-gradient(145deg, #6B8DD6, #8E37D7);
+    color: white;
+    box-shadow: 0 8px 20px rgba(107, 141, 214, 0.4);
+}
+
+.home-button {
+    background: linear-gradient(145deg, #00C853, #69F0AE);
+    color: white;
+    box-shadow: 0 8px 20px rgba(0, 200, 83, 0.4);
+}
+
+.download-button:hover,
+.home-button:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+.download-button::after,
+.home-button::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(45deg);
+    animation: shine 2s infinite;
+}
+
+.origin, .destination {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    min-width: 220px;
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+
+.origin:hover, .destination:hover {
+    transform: translateY(-3px);
+}
+
+.time {
+    font-size: 1.6em;
+    font-weight: 700;
+    color: #8E37D7;
+    margin: 12px 0;
+    text-shadow: 0 2px 5px rgba(142, 55, 215, 0.2);
+}
+
+@keyframes shine {
+    0% { transform: translateX(-100%) rotate(45deg); }
+    100% { transform: translateX(100%) rotate(45deg); }
+}
+
+@media print {
+    body {
+        background: white;
+    }
+    .confirmation-page {
+        box-shadow: none;
+        margin: 0;
+        padding: 20px;
+    }
+    .action-buttons {
+        display: none;
+    }
+}
